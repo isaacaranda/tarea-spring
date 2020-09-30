@@ -29,10 +29,6 @@ public class Vendedor {
 	@Column(name = "nombre", nullable = false)
 	private String nombre;
 
-	@Size(min = 3, max = 10, message = "Vendedor debe tener minimo 3 caracteres")
-	@Column(name = "vendedor", nullable = false)
-	private String vendedor;
-
 	@Size(min = 3, max = 150, message = "Direccion debe tener minimo 3 caracteres")
 	@Column(name = "direccion", nullable = false)
 	private String direccion;
@@ -59,14 +55,6 @@ public class Vendedor {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getVendedor() {
-		return vendedor;
-	}
-
-	public void setVendedor(String vendedor) {
-		this.vendedor = vendedor;
 	}
 
 	public String getDireccion() {

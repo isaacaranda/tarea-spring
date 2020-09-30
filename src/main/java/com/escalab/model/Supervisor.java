@@ -22,10 +22,6 @@ public class Supervisor {
 	@Column(name = "nombre", nullable = false)
 	private String nombre;
 
-	@Size(min = 3, max = 10, message = "Supervisor debe tener minimo 3 caracteres")
-	@Column(name = "supervisor", nullable = false)
-	private String supervisor;
-
 	@Size(min = 3, max = 150, message = "Direccion debe tener minimo 3 caracteres")
 	@Column(name = "direccion", nullable = false)
 	private String direccion;
@@ -48,14 +44,6 @@ public class Supervisor {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getSupervisor() {
-		return supervisor;
-	}
-
-	public void setSupervisor(String supervisor) {
-		this.supervisor = supervisor;
 	}
 
 	public String getDireccion() {

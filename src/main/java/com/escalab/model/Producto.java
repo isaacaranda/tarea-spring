@@ -33,9 +33,6 @@ public class Producto {
 	@Column(name = "valor", nullable = false)
 	private Double valor;
 
-	@Column(name = "producto", nullable = false, unique = true)
-	private String producto;
-
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "compra_producto", joinColumns = @JoinColumn(name = "id_producto", referencedColumnName = "idProducto"), inverseJoinColumns = @JoinColumn(name = "id_venta", referencedColumnName = "idVenta"))
 	private List<Venta> ventas;
@@ -70,14 +67,6 @@ public class Producto {
 
 	public void setValor(Double valor) {
 		this.valor = valor;
-	}
-
-	public String getProducto() {
-		return producto;
-	}
-
-	public void setProducto(String producto) {
-		this.producto = producto;
 	}
 
 	public List<Venta> getVentas() {
